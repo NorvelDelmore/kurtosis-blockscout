@@ -1,0 +1,6 @@
+blockscout_public_port: 50101
+rpc_url: "http://172.16.0.13:8123"
+trace_url": "http://172.16.0.13:8123"
+ws_url": "ws://172.16.0.13:8133"
+chain_id": "10101"
+deployment_suffix": "-001"

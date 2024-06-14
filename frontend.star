@@ -16,6 +16,8 @@ def run(plan, cfg, stack_info):
         api_host = service_ip
         api_port = str(backend_exposed)
 
+    plan.print("xxxxxxxxxxxxxxxxxx")
+
     env_vars = {
         "PORT": str(service_port),
         "NEXT_PUBLIC_NETWORK_NAME": title,
@@ -31,8 +33,7 @@ def run(plan, cfg, stack_info):
             stack_info["visualize_host"], stack_info["visualize_port"]
         ),
         "NEXT_PUBLIC_APP_PROTOCOL": "http",
-        "NEXT_PUBLIC_APP_HOST": service_ip or "127.0.0.1",
-        "NEXT_PUBLIC_APP_PORT": str(service_port),
+        "NEXT_PUBLIC_APP_HOST": "scan-test.sending.network",
         "NEXT_PUBLIC_USE_NEXT_JS_PROXY": "true",
         "NEXT_PUBLIC_AD_BANNER_PROVIDER": "none",
         "NEXT_PUBLIC_AD_TEXT_PROVIDER": "none",
